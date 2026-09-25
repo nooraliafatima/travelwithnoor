@@ -2,434 +2,1347 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Travel With Noor | Travel Guides, Tips & Destination Inspiration</title>
+    <title>Travel With Noor | Travel Guides, Destinations & Travel Tips</title>
 
-    <meta name="description" content="Travel With Noor brings you destination guides, travel tips, things to do, itineraries and inspiration for exploring destinations around the world.">
+    <meta name="description" content="Travel With Noor shares destination guides, things to do, travel tips, itineraries, food, culture and inspiration for exploring destinations around the world.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://nooraliafatima.github.io/travelwithnoor/">
 
     <style>
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            color: #222;
+            color: #202020;
             background: #ffffff;
-            line-height: 1.6;
+            line-height: 1.65;
         }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: #ffffff;
-            border-bottom: 1px solid #e8e8e8;
-            padding: 18px 6%;
+            border-bottom: 1px solid #eeeeee;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
-        nav {
-            max-width: 1200px;
-            margin: auto;
+        .nav {
+            min-height: 76px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            gap: 30px;
         }
 
         .logo {
             font-size: 25px;
-            font-weight: 700;
-            color: #111;
-            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #171717;
         }
 
         .logo span {
-            color: #00897b;
+            color: #087f73;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 28px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 15px;
-        }
-
-        nav ul li a:hover {
-            color: #00897b;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)),
-            url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=85");
-            background-size: cover;
-            background-position: center;
-            min-height: 520px;
+        .menu {
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-            color: white;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .menu a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #444;
+            transition: 0.2s ease;
+        }
+
+        .menu a:hover {
+            color: #087f73;
+        }
+
+        .nav-button {
+            background: #087f73;
+            color: white !important;
+            padding: 10px 17px;
+            border-radius: 4px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 610px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.48),
+                    rgba(0,0,0,0.48)
+                ),
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+            background-position: center;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 760px;
+            color: #ffffff;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            color: #b9eee8;
         }
 
         .hero h1 {
-            font-size: 54px;
-            line-height: 1.15;
-            margin-bottom: 20px;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
         }
 
         .hero p {
-            font-size: 19px;
-            margin-bottom: 30px;
+            max-width: 650px;
+            font-size: 18px;
+            color: #f3f3f3;
+            margin-bottom: 32px;
         }
 
-        .hero-button {
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
             display: inline-block;
-            background: #00897b;
+            padding: 13px 23px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            background: #087f73;
             color: white;
-            padding: 13px 28px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
         }
 
-        .hero-button:hover {
-            background: #00695c;
+        .button-primary:hover {
+            background: #05675e;
         }
 
-        .section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 25px;
+        .button-light {
+            background: white;
+            color: #222;
         }
 
-        .section-heading {
+        .button-light:hover {
+            background: #eeeeee;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            padding: 75px 0 40px;
             text-align: center;
-            margin-bottom: 40px;
         }
 
-        .section-heading h2 {
-            font-size: 34px;
+        .section-label {
+            color: #087f73;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 10px;
         }
 
-        .section-heading p {
-            color: #666;
+        .section-title {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 13px;
+            letter-spacing: -1px;
         }
 
-        .cards {
+        .section-description {
+            max-width: 650px;
+            margin: auto;
+            color: #6b6b6b;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           FEATURED STORIES
+        ========================= */
+
+        .featured {
+            padding: 35px 0 80px;
+        }
+
+        .story-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            grid-template-columns: 1.35fr 1fr 1fr;
+            gap: 22px;
         }
 
-        .card {
-            border: 1px solid #e5e5e5;
-            border-radius: 8px;
+        .story {
+            background: #ffffff;
+            border: 1px solid #e7e7e7;
+            border-radius: 7px;
             overflow: hidden;
-            background: white;
-            transition: transform .2s ease, box-shadow .2s ease;
+            transition: 0.25s ease;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,.08);
+        .story:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
         }
 
-        .card img {
+        .story-image {
+            height: 235px;
+            overflow: hidden;
+        }
+
+        .story:first-child .story-image {
+            height: 285px;
+        }
+
+        .story-image img {
             width: 100%;
-            height: 210px;
+            height: 100%;
             object-fit: cover;
+            transition: 0.35s ease;
         }
 
-        .card-content {
+        .story:hover img {
+            transform: scale(1.04);
+        }
+
+        .story-content {
             padding: 22px;
         }
 
-        .card-content h3 {
+        .story-category {
+            color: #087f73;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 9px;
+        }
+
+        .story h3 {
             font-size: 21px;
+            line-height: 1.3;
             margin-bottom: 10px;
         }
 
-        .card-content p {
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 15px;
+        .story p {
+            color: #6a6a6a;
+            font-size: 14px;
+            margin-bottom: 16px;
         }
 
         .read-more {
-            color: #00897b;
-            font-weight: 600;
-            text-decoration: none;
+            color: #087f73;
+            font-size: 13px;
+            font-weight: 800;
         }
 
-        .categories {
-            background: #f6f8f7;
+
+        /* =========================
+           REGIONS
+        ========================= */
+
+        .regions-section {
+            background: #f4f7f6;
+            padding: 80px 0;
         }
 
-        .category-grid {
+        .region-grid {
+            margin-top: 38px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
+            gap: 16px;
         }
 
-        .category {
-            background: white;
-            padding: 25px 15px;
-            text-align: center;
-            border-radius: 8px;
+        .region {
+            position: relative;
+            height: 190px;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .region img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s ease;
+        }
+
+        .region:hover img {
+            transform: scale(1.06);
+        }
+
+        .region-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.75)
+            );
+        }
+
+        .region-overlay h3 {
+            color: white;
+            font-size: 21px;
+        }
+
+
+        /* =========================
+           TRAVEL TOPICS
+        ========================= */
+
+        .topics {
+            padding: 85px 0;
+        }
+
+        .topic-grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .topic {
+            padding: 28px;
             border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            background: white;
+            transition: 0.2s ease;
         }
 
-        .category h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
+        .topic:hover {
+            border-color: #087f73;
+            transform: translateY(-3px);
         }
 
-        .category p {
-            color: #777;
+        .topic-number {
+            color: #087f73;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .topic h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .topic p {
+            color: #6a6a6a;
             font-size: 14px;
         }
 
-        .about {
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-section {
+            background: #111918;
+            color: white;
+            padding: 90px 0;
+        }
+
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 65px;
             align-items: center;
         }
 
-        .about h2 {
-            font-size: 34px;
-            margin-bottom: 18px;
-        }
-
-        .about p {
-            color: #555;
-            margin-bottom: 15px;
+        .about-image {
+            height: 430px;
+            overflow: hidden;
+            border-radius: 7px;
         }
 
         .about-image img {
             width: 100%;
-            border-radius: 10px;
+            height: 100%;
+            object-fit: cover;
         }
 
-        footer {
-            background: #111;
-            color: #ddd;
+        .about-content .section-label {
+            color: #9bded7;
+        }
+
+        .about-content h2 {
+            font-size: 40px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #c8cfcd;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           NEWSLETTER
+        ========================= */
+
+        .newsletter {
+            padding: 75px 0;
             text-align: center;
-            padding: 35px 20px;
         }
 
-        footer h3 {
-            color: white;
+        .newsletter-box {
+            max-width: 760px;
+            margin: auto;
+            padding: 55px 35px;
+            background: #f4f7f6;
+            border-radius: 8px;
+        }
+
+        .newsletter-box h2 {
+            font-size: 31px;
             margin-bottom: 10px;
         }
 
-        footer p {
+        .newsletter-box p {
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0c0e0e;
+            color: #aaa;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand span {
+            color: #087f73;
+        }
+
+        .footer-brand p {
             font-size: 14px;
+            max-width: 350px;
+        }
+
+        footer h4 {
+            color: white;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+        footer li a {
+            font-size: 13px;
             color: #aaa;
         }
 
-        @media (max-width: 800px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
+        footer li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #292d2c;
+            padding-top: 22px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .story-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
-            nav ul {
-                gap: 15px;
+            .story:first-child {
+                grid-column: span 2;
+            }
+
+            .region-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .topic-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .nav {
+                padding: 15px 0;
+                flex-direction: column;
+            }
+
+            .menu {
+                gap: 14px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            .hero h1 {
-                font-size: 38px;
+            .nav-button {
+                display: none;
             }
 
-            .cards,
-            .category-grid,
-            .about {
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story:first-child {
+                grid-column: auto;
+            }
+
+            .region-grid,
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .about-content h2 {
+                font-size: 30px;
+            }
+
+            .footer-grid {
                 grid-template-columns: 1fr;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-<header>
-    <nav>
-        <a href="index.html" class="logo">Travel <span>With Noor</span></a>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#destinations">Destinations</a></li>
-            <li><a href="#categories">Travel Tips</a></li>
-            <li><a href="#about">About</a></li>
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            Travel <span>With Noor</span>
+        </a>
+
+        <ul class="menu">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="#stories">Stories</a>
+            </li>
+
+            <li>
+                <a href="#destinations">Destinations</a>
+            </li>
+
+            <li>
+                <a href="#topics">Travel Tips</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#newsletter" class="nav-button">
+                    Explore
+                </a>
+            </li>
+
         </ul>
-    </nav>
+
+    </div>
+
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Explore More. Travel Better.</h1>
 
-        <p>
-            Destination guides, travel ideas, practical tips and inspiring stories
-            to help you discover the world.
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Travel With Noor
+            </div>
+
+            <h1>
+                Discover places worth remembering.
+            </h1>
+
+            <p>
+                Destination guides, inspiring travel stories and practical
+                ideas to help you explore the world with more confidence.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#stories" class="button button-primary">
+                    Explore Travel Stories
+                </a>
+
+                <a href="#destinations" class="button button-light">
+                    Browse Destinations
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="section-label">
+            From the Journal
+        </div>
+
+        <h2 class="section-title">
+            Travel inspiration for curious explorers
+        </h2>
+
+        <p class="section-description">
+            Explore destination ideas, cultural experiences, scenic places,
+            practical travel advice and useful information for planning your
+            next journey.
         </p>
 
-        <a href="#destinations" class="hero-button">Explore Travel Guides</a>
-    </div>
-</section>
-
-<section class="section" id="destinations">
-
-    <div class="section-heading">
-        <h2>Explore Destinations</h2>
-        <p>Discover places, experiences and travel ideas from around the world.</p>
-    </div>
-
-    <div class="cards">
-
-        <article class="card">
-            <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=900&q=80" alt="Tokyo travel destination">
-
-            <div class="card-content">
-                <h3>Japan Travel Guide</h3>
-
-                <p>
-                    Discover Japan's cities, culture, food, attractions and
-                    practical travel tips.
-                </p>
-
-                <a href="#" class="read-more">Read Guide →</a>
-            </div>
-        </article>
-
-        <article class="card">
-            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80" alt="India travel destination">
-
-            <div class="card-content">
-                <h3>India Travel Guide</h3>
-
-                <p>
-                    Explore fascinating destinations, cultural experiences,
-                    food and travel ideas across India.
-                </p>
-
-                <a href="#" class="read-more">Read Guide →</a>
-            </div>
-        </article>
-
-        <article class="card">
-            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=80" alt="Greece travel destination">
-
-            <div class="card-content">
-                <h3>Europe Travel Ideas</h3>
-
-                <p>
-                    Find inspiration for European destinations, city breaks,
-                    scenic journeys and cultural experiences.
-                </p>
-
-                <a href="#" class="read-more">Read Guide →</a>
-            </div>
-        </article>
-
-    </div>
-</section>
-
-<section class="categories" id="categories">
-
-    <div class="section">
-
-        <div class="section-heading">
-            <h2>Travel Inspiration</h2>
-            <p>Helpful ideas for planning better trips.</p>
-        </div>
-
-        <div class="category-grid">
-
-            <div class="category">
-                <h3>Destination Guides</h3>
-                <p>Places worth exploring</p>
-            </div>
-
-            <div class="category">
-                <h3>Things to Do</h3>
-                <p>Experiences to add to your trip</p>
-            </div>
-
-            <div class="category">
-                <h3>Travel Tips</h3>
-                <p>Practical advice for travellers</p>
-            </div>
-
-            <div class="category">
-                <h3>Best Time to Visit</h3>
-                <p>Weather and seasonal guides</p>
-            </div>
-
-        </div>
-
     </div>
 
 </section>
 
-<section class="section" id="about">
 
-    <div class="about">
 
-        <div>
-            <h2>Welcome to Travel With Noor</h2>
+<!-- =========================
+     FEATURED STORIES
+========================= -->
 
-            <p>
-                Travel With Noor is a travel publication created for curious
-                travellers looking for destination inspiration and practical
-                travel information.
-            </p>
+<section class="featured" id="stories">
 
-            <p>
-                From destination guides and things to do to seasonal travel
-                advice and cultural experiences, the goal is to make travel
-                research easier and more useful.
-            </p>
+    <div class="container">
+
+        <div class="story-grid">
+
+
+            <article class="story">
+
+                <div class="story-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1200&q=85"
+                        alt="Traditional Japanese street and architecture"
+                    >
+
+                </div>
+
+                <div class="story-content">
+
+                    <div class="story-category">
+                        Asia
+                    </div>
+
+                    <h3>
+                        Exploring Japan: Culture, Cities and Experiences
+                    </h3>
+
+                    <p>
+                        Discover the experiences, places and cultural details
+                        that make Japan such a fascinating destination.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read the story →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="story">
+
+                <div class="story-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=85"
+                        alt="Scenic Italian coastal destination"
+                    >
+
+                </div>
+
+                <div class="story-content">
+
+                    <div class="story-category">
+                        Europe
+                    </div>
+
+                    <h3>
+                        Beautiful European Destinations to Explore
+                    </h3>
+
+                    <p>
+                        From historic cities to scenic coastlines, discover
+                        ideas for your next European journey.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read the story →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="story">
+
+                <div class="story-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1000&q=85"
+                        alt="Dubai skyline and travel destination"
+                    >
+
+                </div>
+
+                <div class="story-content">
+
+                    <div class="story-category">
+                        Middle East
+                    </div>
+
+                    <h3>
+                        Places and Experiences Across the Middle East
+                    </h3>
+
+                    <p>
+                        Explore fascinating destinations, landscapes and
+                        cultural experiences across the region.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read the story →
+                    </a>
+
+                </div>
+
+            </article>
+
+
         </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DESTINATIONS
+========================= -->
+
+<section class="regions-section" id="destinations">
+
+    <div class="container">
+
+        <div class="section-label">
+            Explore the World
+        </div>
+
+        <h2 class="section-title">
+            Explore by region
+        </h2>
+
+        <p class="section-description">
+            Find travel inspiration across some of the world's most
+            fascinating regions.
+        </p>
+
+
+        <div class="region-grid">
+
+
+            <a href="#" class="region">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=900&q=80"
+                    alt="Asia travel destination"
+                >
+
+                <div class="region-overlay">
+                    <h3>Asia</h3>
+                </div>
+
+            </a>
+
+
+
+            <a href="#" class="region">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
+                    alt="Europe travel destination"
+                >
+
+                <div class="region-overlay">
+                    <h3>Europe</h3>
+                </div>
+
+            </a>
+
+
+
+            <a href="#" class="region">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
+                    alt="South Asia travel destination"
+                >
+
+                <div class="region-overlay">
+                    <h3>South Asia</h3>
+                </div>
+
+            </a>
+
+
+
+            <a href="#" class="region">
+
+                <img
+                    src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=900&q=80"
+                    alt="Africa travel destination"
+                >
+
+                <div class="region-overlay">
+                    <h3>Africa</h3>
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TRAVEL TOPICS
+========================= -->
+
+<section class="topics" id="topics">
+
+    <div class="container">
+
+        <div class="section-label">
+            Travel Planning
+        </div>
+
+        <h2 class="section-title">
+            Find useful travel ideas
+        </h2>
+
+        <p class="section-description">
+            Practical information to help you research destinations and
+            make better-informed travel plans.
+        </p>
+
+
+        <div class="topic-grid">
+
+
+            <article class="topic">
+
+                <div class="topic-number">
+                    01
+                </div>
+
+                <h3>
+                    Best Time to Visit
+                </h3>
+
+                <p>
+                    Understand seasons, weather and the best periods to
+                    experience different destinations.
+                </p>
+
+            </article>
+
+
+
+            <article class="topic">
+
+                <div class="topic-number">
+                    02
+                </div>
+
+                <h3>
+                    Things to Do
+                </h3>
+
+                <p>
+                    Discover attractions, experiences, cultural activities
+                    and memorable things to add to your itinerary.
+                </p>
+
+            </article>
+
+
+
+            <article class="topic">
+
+                <div class="topic-number">
+                    03
+                </div>
+
+                <h3>
+                    Travel Tips
+                </h3>
+
+                <p>
+                    Get practical ideas covering transportation, planning,
+                    local customs and everyday travel questions.
+                </p>
+
+            </article>
+
+
+
+            <article class="topic">
+
+                <div class="topic-number">
+                    04
+                </div>
+
+                <h3>
+                    Destination Guides
+                </h3>
+
+                <p>
+                    Explore detailed destination information before deciding
+                    where your next journey should take you.
+                </p>
+
+            </article>
+
+
+
+            <article class="topic">
+
+                <div class="topic-number">
+                    05
+                </div>
+
+                <h3>
+                    Food & Culture
+                </h3>
+
+                <p>
+                    Discover local food traditions, cultural experiences and
+                    the stories behind destinations.
+                </p>
+
+            </article>
+
+
+
+            <article class="topic">
+
+                <div class="topic-number">
+                    06
+                </div>
+
+                <h3>
+                    Nature & Adventure
+                </h3>
+
+                <p>
+                    Find scenic landscapes, outdoor experiences and
+                    destinations for adventure lovers.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about-section" id="about">
+
+    <div class="container about-grid">
+
 
         <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=85" alt="Traveller exploring a destination">
+
+            <img
+                src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=1200&q=85"
+                alt="Travel journal, map and camera"
+            >
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="section-label">
+                About Travel With Noor
+            </div>
+
+            <h2>
+                A place to discover your next journey.
+            </h2>
+
+            <p>
+                Travel With Noor is an independent travel publication
+                sharing destination ideas, travel guides and practical
+                information for curious travellers.
+            </p>
+
+            <p>
+                From discovering lesser-known places to understanding the
+                best time to visit a destination, the goal is to make
+                travel research easier, clearer and more useful.
+            </p>
+
+            <a href="#" class="button button-primary">
+                Discover More
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter" id="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <div class="section-label">
+                Keep Exploring
+            </div>
+
+            <h2>
+                Your next destination starts with an idea.
+            </h2>
+
+            <p>
+                Browse travel stories, destination guides and practical
+                information whenever you're planning your next trip.
+            </p>
+
+            <a href="#stories" class="button button-primary">
+                Explore Travel Stories
+            </a>
+
         </div>
 
     </div>
 
 </section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <h3>Travel With Noor</h3>
+    <div class="container">
 
-    <p>
-        Travel guides, destination inspiration and practical travel tips.
-    </p>
+        <div class="footer-grid">
 
-    <p style="margin-top: 12px;">
-        © 2026 Travel With Noor. All rights reserved.
-    </p>
+
+            <div class="footer-brand">
+
+                <h3>
+                    Travel <span>With Noor</span>
+                </h3>
+
+                <p>
+                    Destination guides, travel stories, practical tips and
+                    inspiration for exploring the world.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h4>
+                    Explore
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#destinations">
+                            Destinations
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#stories">
+                            Travel Stories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#topics">
+                            Travel Tips
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div>
+
+                <h4>
+                    Regions
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Asia
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Europe
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Middle East
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Africa
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div>
+
+                <h4>
+                    Information
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Travel With Noor. All rights reserved.
+
+        </div>
+
+    </div>
 
 </footer>
+
 
 </body>
 </html>
