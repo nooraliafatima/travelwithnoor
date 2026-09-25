@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://nooraliafatima.github.io/travelwithnoor/blog/">
 
-    <meta name="robots" content="index, follow">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="canonical"
+        href="https://nooraliafatima.github.io/travelwithnoor/blog/"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
     <title>Travel Blog | Travel With Noor</title>
 
-    <meta name="description" content="Explore travel guides, destination ideas, travel tips, things to do, and practical travel inspiration from Travel With Noor.">
+    <meta
+        name="description"
+        content="Explore travel guides, destination ideas, travel tips, things to do, and practical travel inspiration from Travel With Noor."
+    >
 
     <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -29,35 +48,89 @@
             color: inherit;
         }
 
+
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
-            height: 64px;
+            width: 100%;
+            height: 70px;
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .container.nav {
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0 30px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 7%;
-            border-bottom: 1px solid #eeeeee;
-            background: #ffffff;
         }
+
+        /* Logo */
 
         .logo {
-            font-size: 18px;
-            font-weight: 700;
-            color: #087f78;
+            font-size: 25px;
+            font-weight: 800;
+            color: #111111;
+            text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
-        nav {
+        .logo span {
+            color: #008f83;
+        }
+
+        /* Navigation */
+
+        .menu {
+            list-style: none;
             display: flex;
-            gap: 25px;
+            align-items: center;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
         }
 
-        nav a {
-            font-size: 13px;
-            color: #333333;
+        .menu li {
+            list-style: none;
         }
 
-        nav a:hover {
-            color: #07877f;
+        .menu li a {
+            color: #222222;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
+
+        .menu li a:hover {
+            color: #008f83;
+        }
+
+        /* Explore Button */
+
+        .menu .nav-button {
+            background: #008f83;
+            color: #ffffff;
+            padding: 11px 22px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .menu .nav-button:hover {
+            background: #00776d;
+            color: #ffffff;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             background: #0d1a18;
@@ -76,6 +149,7 @@
 
         .hero h1 {
             font-size: 46px;
+            line-height: 1.15;
             margin: 12px 0;
         }
 
@@ -85,6 +159,11 @@
             color: #d8e1df;
             font-size: 16px;
         }
+
+
+        /* =========================
+           BLOG SECTION
+        ========================= */
 
         .blog-section {
             max-width: 1100px;
@@ -107,22 +186,34 @@
             font-size: 14px;
         }
 
+
+        /* =========================
+           BLOG GRID
+        ========================= */
+
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 28px;
         }
 
+
+        /* =========================
+           BLOG CARD
+        ========================= */
+
         .blog-card {
             border: 1px solid #dddddd;
             background: #ffffff;
             overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .blog-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
 
         .blog-card img {
@@ -165,6 +256,11 @@
         .read-more:hover {
             text-decoration: underline;
         }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         .footer {
             background: #0d1514;
@@ -216,7 +312,13 @@
             text-align: center;
         }
 
+
+        /* =========================
+           TABLET
+        ========================= */
+
         @media (max-width: 800px) {
+
             .blog-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -224,23 +326,50 @@
             .hero h1 {
                 font-size: 36px;
             }
+
         }
 
+
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 550px) {
+
             header {
-                padding: 0 20px;
+                height: auto;
             }
 
-            nav {
-                gap: 10px;
+            .container.nav {
+                padding: 18px 20px;
+                flex-direction: column;
+                gap: 18px;
             }
 
-            nav a {
-                font-size: 11px;
+            .logo {
+                font-size: 22px;
+            }
+
+            .menu {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu li a {
+                font-size: 13px;
+            }
+
+            .menu .nav-button {
+                padding: 9px 17px;
             }
 
             .blog-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 60px 20px;
             }
 
             .hero h1 {
@@ -250,35 +379,65 @@
             .footer-inner {
                 flex-direction: column;
             }
+
+            .footer-links {
+                flex-wrap: wrap;
+            }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <div class="container nav">
 
-        <a href="index.html" class="logo">
+        <a
+            href="../index.html"
+            class="logo"
+        >
             Travel <span>With Noor</span>
         </a>
+
 
         <ul class="menu">
 
             <li>
-                <a href="index.html">Home</a>
+                <a href="../index.html">
+                    Home
+                </a>
             </li>
 
-            <li>
-                <a href="https://nooraliafatima.github.io/travelwithnoor/blog/">Blogs</a>
-            </li>
-            <li>
-                <a href="https://nooraliafatima.github.io/travelwithnoor/about.html">About</a>
-            </li>
 
             <li>
-                <a href="https://www.aroohatours.com/des" class="nav-button">
+                <a href="./index.html">
+                    Blogs
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../about.html">
+                    About
+                </a>
+            </li>
+
+
+            <li>
+                <a
+                    href="https://www.aroohatours.com/des"
+                    class="nav-button"
+                >
                     Explore
                 </a>
             </li>
@@ -290,99 +449,144 @@
 </header>
 
 
-<section class="hero">
-    <small>Travel With Noor</small>
+<!-- =========================
+     HERO
+========================= -->
 
-    <h1>Travel Stories & Guides</h1>
+<section class="hero">
+
+    <small>
+        Travel With Noor
+    </small>
+
+    <h1>
+        Travel Stories &amp; Guides
+    </h1>
 
     <p>
         Discover destination guides, things to do, travel tips,
         practical advice and inspiration for your next journey.
     </p>
+
 </section>
 
+
+<!-- =========================
+     BLOG SECTION
+========================= -->
 
 <section class="blog-section">
 
     <div class="section-heading">
-        <h2>Latest Travel Guides</h2>
+
+        <h2>
+            Latest Travel Guides
+        </h2>
 
         <p>
             Explore useful travel information and destination ideas
             from around the world.
         </p>
+
     </div>
 
 
     <div class="blog-grid">
 
 
-        <!-- ARTICLE 1 -->
-       <!-- ARTICLE 4 -->
-<article class="blog-card">
+        <!-- =========================
+             ALBANIAN ALPS BLOG
+        ========================= -->
 
-<img
-src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=900&q=80"
-alt="Albanian Alps mountain landscape">
+        <article class="blog-card">
 
-<div class="blog-content">
+            <img
+                src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=900&q=80"
+                alt="Albanian Alps mountain landscape"
+            >
 
-<span class="category">Albania</span>
+            <div class="blog-content">
 
-<h3>
-Albanian Alps Travel Guide: Best Places to Visit
-</h3>
+                <span class="category">
+                    Albania
+                </span>
 
-<p>
-Discover Theth, Valbona, Vermosh, Lëpushë and other
-spectacular places across the Albanian Alps.
-</p>
+                <h3>
+                    Albanian Alps Travel Guide: Best Places to Visit
+                </h3>
 
-<a href="albanian-alps-travel-guide.html" class="read-more">
-Read Travel Guide →
-</a>
+                <p>
+                    Discover Theth, Valbona, Vermosh, Lëpushë and other
+                    spectacular places across the Albanian Alps.
+                </p>
 
-</div>
+                <a
+                    href="./albanian-alps-travel-guide.html"
+                    class="read-more"
+                >
+                    Read Travel Guide →
+                </a>
 
-</article>
+            </div>
 
-        <!-- ARTICLE 2 -->
-        
+        </article>
 
-        <!-- ARTICLE 3 -->
-        
 
     </div>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer class="footer">
 
     <div class="footer-inner">
 
+
         <div>
-            <h3>Travel With Noor</h3>
+
+            <h3>
+                Travel With Noor
+            </h3>
 
             <p>
                 Destination ideas, travel guides and practical
                 information for curious travellers.
             </p>
+
         </div>
 
+
         <div class="footer-links">
-            <a href="../index.html">Home</a>
-            <a href="https://nooraliafatima.github.io/travelwithnoor/blog/">Blogs</a>
-            <a href="https://nooraliafatima.github.io/travelwithnoor/about">About</a>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="./index.html">
+                Blogs
+            </a>
+
+            <a href="../about.html">
+                About
+            </a>
+
         </div>
 
     </div>
 
+
     <div class="copyright">
+
         © 2026 Travel With Noor. All rights reserved.
+
     </div>
 
 </footer>
+
 
 </body>
 </html>
