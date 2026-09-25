@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Travel With Noor | Travel Guides, Destinations & Travel Tips</title>
+    <link rel="canonical"
+          href="https://nooraliafatima.github.io/travelwithnoor/">
 
-    <meta name="description" content="Travel With Noor shares destination guides, things to do, travel tips, itineraries, food, culture and inspiration for exploring destinations around the world.">
+    <meta name="robots"
+          content="index, follow">
 
-    <meta name="robots" content="index, follow">
+    <title>Travel With Noor | Travel Guides & Inspiration</title>
 
-    <link rel="canonical" href="https://nooraliafatima.github.io/travelwithnoor/">
+    <meta name="description"
+          content="Travel With Noor shares destination guides, travel stories, practical travel tips and inspiration to help you discover the world.">
 
     <style>
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         html {
@@ -27,14 +33,9 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            color: #202020;
+            color: #182321;
             background: #ffffff;
-            line-height: 1.65;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
+            line-height: 1.7;
         }
 
         a {
@@ -42,9 +43,16 @@
             color: inherit;
         }
 
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
         .container {
-            width: min(1180px, 92%);
-            margin: auto;
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 25px;
         }
 
 
@@ -55,53 +63,47 @@
         header {
             background: #ffffff;
             border-bottom: 1px solid #eeeeee;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            position: relative;
+            z-index: 10;
         }
 
         .nav {
-            min-height: 76px;
+            min-height: 78px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 30px;
         }
 
         .logo {
             font-size: 25px;
-            font-weight: 800;
+            font-weight: 700;
             letter-spacing: -0.5px;
-            color: #171717;
         }
 
         .logo span {
-            color: #087f73;
+            color: #008f83;
         }
 
         .menu {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 32px;
             list-style: none;
         }
 
         .menu a {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
-            color: #444;
+            color: #1b2927;
             transition: 0.2s ease;
         }
 
         .menu a:hover {
-            color: #087f73;
+            color: #008f83;
         }
 
-        .nav-button {
-            background: #087f73;
-            color: white !important;
-            padding: 10px 17px;
-            border-radius: 4px;
+        .menu .blog-link {
+            color: #008f83;
         }
 
 
@@ -110,367 +112,210 @@
         ========================= */
 
         .hero {
-            min-height: 610px;
+            min-height: 590px;
             display: flex;
             align-items: center;
-            position: relative;
-
             background:
                 linear-gradient(
-                    rgba(0,0,0,0.48),
-                    rgba(0,0,0,0.48)
+                    rgba(5, 28, 25, 0.72),
+                    rgba(5, 28, 25, 0.72)
                 ),
-                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85");
-
-            background-size: cover;
-            background-position: center;
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
+                center center / cover no-repeat;
         }
 
         .hero-content {
-            max-width: 760px;
+            max-width: 780px;
             color: #ffffff;
             padding: 80px 0;
         }
 
         .eyebrow {
-            display: inline-block;
-            font-size: 12px;
+            color: #5ee7d5;
+            font-size: 13px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
-            color: #b9eee8;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 6vw, 72px);
-            line-height: 1.05;
-            letter-spacing: -2px;
-            margin-bottom: 24px;
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1.02;
+            letter-spacing: -3px;
+            margin-bottom: 28px;
         }
 
         .hero p {
-            max-width: 650px;
-            font-size: 18px;
-            color: #f3f3f3;
-            margin-bottom: 32px;
+            max-width: 700px;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #f1f5f4;
+            margin-bottom: 34px;
         }
 
-        .hero-actions {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .button {
+        .hero-button {
             display: inline-block;
-            padding: 13px 23px;
-            border-radius: 4px;
-            font-size: 14px;
+            background: #008f83;
+            color: #ffffff;
+            padding: 14px 24px;
+            border-radius: 5px;
+            font-size: 15px;
             font-weight: 700;
             transition: 0.2s ease;
         }
 
-        .button-primary {
-            background: #087f73;
-            color: white;
-        }
-
-        .button-primary:hover {
-            background: #05675e;
-        }
-
-        .button-light {
-            background: white;
-            color: #222;
-        }
-
-        .button-light:hover {
-            background: #eeeeee;
+        .hero-button:hover {
+            background: #00756b;
         }
 
 
         /* =========================
-           INTRO
+           FEATURED BLOG
         ========================= */
 
-        .intro {
-            padding: 75px 0 40px;
+        .featured-section {
+            padding: 90px 0;
+            background: #ffffff;
+        }
+
+        .section-intro {
             text-align: center;
+            max-width: 760px;
+            margin: 0 auto 50px;
         }
 
         .section-label {
-            color: #087f73;
-            font-size: 12px;
-            font-weight: 800;
+            color: #008f83;
+            font-size: 13px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 36px;
+            font-size: 42px;
             line-height: 1.2;
-            margin-bottom: 13px;
             letter-spacing: -1px;
+            margin-bottom: 14px;
         }
 
         .section-description {
-            max-width: 650px;
-            margin: auto;
-            color: #6b6b6b;
-            font-size: 16px;
+            color: #687572;
+            font-size: 17px;
         }
 
 
-        /* =========================
-           FEATURED STORIES
-        ========================= */
+        /* BLOG CARD */
 
-        .featured {
-            padding: 35px 0 80px;
-        }
-
-        .story-grid {
-            display: grid;
-            grid-template-columns: 1.35fr 1fr 1fr;
-            gap: 22px;
-        }
-
-        .story {
-            background: #ffffff;
-            border: 1px solid #e7e7e7;
-            border-radius: 7px;
-            overflow: hidden;
-            transition: 0.25s ease;
-        }
-
-        .story:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
-        }
-
-        .story-image {
-            height: 235px;
-            overflow: hidden;
-        }
-
-        .story:first-child .story-image {
-            height: 285px;
-        }
-
-        .story-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.35s ease;
-        }
-
-        .story:hover img {
-            transform: scale(1.04);
-        }
-
-        .story-content {
-            padding: 22px;
-        }
-
-        .story-category {
-            color: #087f73;
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 9px;
-        }
-
-        .story h3 {
-            font-size: 21px;
-            line-height: 1.3;
-            margin-bottom: 10px;
-        }
-
-        .story p {
-            color: #6a6a6a;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-
-        .read-more {
-            color: #087f73;
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-
-        /* =========================
-           REGIONS
-        ========================= */
-
-        .regions-section {
-            background: #f4f7f6;
-            padding: 80px 0;
-        }
-
-        .region-grid {
-            margin-top: 38px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-
-        .region {
-            position: relative;
-            height: 190px;
-            overflow: hidden;
-            border-radius: 6px;
-        }
-
-        .region img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.3s ease;
-        }
-
-        .region:hover img {
-            transform: scale(1.06);
-        }
-
-        .region-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-            background: linear-gradient(
-                transparent,
-                rgba(0,0,0,0.75)
-            );
-        }
-
-        .region-overlay h3 {
-            color: white;
-            font-size: 21px;
-        }
-
-
-        /* =========================
-           TRAVEL TOPICS
-        ========================= */
-
-        .topics {
-            padding: 85px 0;
-        }
-
-        .topic-grid {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .topic {
-            padding: 28px;
-            border: 1px solid #e5e5e5;
-            border-radius: 6px;
-            background: white;
-            transition: 0.2s ease;
-        }
-
-        .topic:hover {
-            border-color: #087f73;
-            transform: translateY(-3px);
-        }
-
-        .topic-number {
-            color: #087f73;
-            font-size: 12px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .topic h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .topic p {
-            color: #6a6a6a;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-section {
-            background: #111918;
-            color: white;
-            padding: 90px 0;
-        }
-
-        .about-grid {
+        .blog-card {
+            max-width: 1000px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 65px;
-            align-items: center;
-        }
-
-        .about-image {
-            height: 430px;
+            background: #ffffff;
+            border: 1px solid #e4e9e7;
+            border-radius: 12px;
             overflow: hidden;
-            border-radius: 7px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
         }
 
-        .about-image img {
+        .blog-image {
+            min-height: 430px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
             width: 100%;
             height: 100%;
+            min-height: 430px;
             object-fit: cover;
         }
 
-        .about-content .section-label {
-            color: #9bded7;
+        .blog-content {
+            padding: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .about-content h2 {
-            font-size: 40px;
+        .blog-category {
+            color: #008f83;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .blog-content h2 {
+            font-size: 34px;
             line-height: 1.2;
+            letter-spacing: -1px;
             margin-bottom: 20px;
         }
 
-        .about-content p {
-            color: #c8cfcd;
-            margin-bottom: 18px;
+        .blog-content p {
+            color: #66716f;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .read-more {
+            display: inline-block;
+            width: fit-content;
+            color: #008f83;
+            font-weight: 700;
             font-size: 15px;
+        }
+
+        .read-more:hover {
+            color: #006f66;
         }
 
 
         /* =========================
-           NEWSLETTER
+           ABOUT TEASER
         ========================= */
 
-        .newsletter {
-            padding: 75px 0;
+        .about-section {
+            background: #f4f8f7;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .newsletter-box {
-            max-width: 760px;
-            margin: auto;
-            padding: 55px 35px;
-            background: #f4f7f6;
-            border-radius: 8px;
+        .about-content {
+            max-width: 750px;
+            margin: 0 auto;
         }
 
-        .newsletter-box h2 {
-            font-size: 31px;
-            margin-bottom: 10px;
+        .about-content h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 18px;
         }
 
-        .newsletter-box p {
-            color: #666;
-            margin-bottom: 24px;
+        .about-content p {
+            color: #66716f;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .about-button {
+            display: inline-block;
+            padding: 13px 23px;
+            border: 1px solid #008f83;
+            color: #008f83;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .about-button:hover {
+            background: #008f83;
+            color: #ffffff;
         }
 
 
@@ -479,61 +324,57 @@
         ========================= */
 
         footer {
-            background: #0c0e0e;
-            color: #aaa;
+            background: #071916;
+            color: #ffffff;
             padding: 55px 0 25px;
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
             gap: 40px;
-            padding-bottom: 40px;
+            padding-bottom: 35px;
+        }
+
+        .footer-brand {
+            max-width: 500px;
         }
 
         .footer-brand h3 {
-            color: white;
-            font-size: 22px;
+            font-size: 25px;
             margin-bottom: 12px;
         }
 
-        .footer-brand span {
-            color: #087f73;
+        .footer-brand h3 span {
+            color: #4ed9c7;
         }
 
         .footer-brand p {
-            font-size: 14px;
-            max-width: 350px;
-        }
-
-        footer h4 {
-            color: white;
-            margin-bottom: 14px;
+            color: #aeb9b6;
             font-size: 14px;
         }
 
-        footer ul {
-            list-style: none;
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
         }
 
-        footer li {
-            margin-bottom: 8px;
+        .footer-links a {
+            color: #d6dfdd;
+            font-size: 14px;
         }
 
-        footer li a {
-            font-size: 13px;
-            color: #aaa;
-        }
-
-        footer li a:hover {
-            color: white;
+        .footer-links a:hover {
+            color: #5ee7d5;
         }
 
         .copyright {
-            border-top: 1px solid #292d2c;
-            padding-top: 22px;
-            font-size: 12px;
+            border-top: 1px solid #20312e;
+            padding-top: 20px;
             text-align: center;
+            color: #899693;
+            font-size: 12px;
         }
 
 
@@ -541,90 +382,121 @@
            RESPONSIVE
         ========================= */
 
-        @media (max-width: 950px) {
-
-            .story-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .story:first-child {
-                grid-column: span 2;
-            }
-
-            .region-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .topic-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-
-        @media (max-width: 650px) {
+        @media (max-width: 850px) {
 
             .nav {
-                padding: 15px 0;
+                min-height: auto;
+                padding: 20px 0;
                 flex-direction: column;
+                gap: 18px;
             }
 
             .menu {
-                gap: 14px;
+                gap: 20px;
+            }
+
+            .hero {
+                min-height: 520px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .blog-card {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-image {
+                min-height: 320px;
+            }
+
+            .blog-image img {
+                min-height: 320px;
+            }
+
+            .blog-content {
+                padding: 40px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 0 18px;
+            }
+
+            .menu {
+                gap: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            .nav-button {
-                display: none;
+            .menu a {
+                font-size: 14px;
             }
 
             .hero {
-                min-height: 550px;
+                min-height: 500px;
+            }
+
+            .hero-content {
+                padding: 60px 0;
             }
 
             .hero h1 {
-                letter-spacing: -1px;
+                font-size: 43px;
+                letter-spacing: -1.5px;
             }
 
             .hero p {
                 font-size: 16px;
             }
 
-            .story-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .story:first-child {
-                grid-column: auto;
-            }
-
-            .region-grid,
-            .topic-grid {
-                grid-template-columns: 1fr;
+            .featured-section {
+                padding: 65px 0;
             }
 
             .section-title {
-                font-size: 29px;
+                font-size: 32px;
+            }
+
+            .blog-image,
+            .blog-image img {
+                min-height: 260px;
+            }
+
+            .blog-content {
+                padding: 30px;
+            }
+
+            .blog-content h2 {
+                font-size: 28px;
+            }
+
+            .about-section {
+                padding: 65px 0;
             }
 
             .about-content h2 {
-                font-size: 30px;
+                font-size: 31px;
             }
 
-            .footer-grid {
-                grid-template-columns: 1fr;
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
             }
+
         }
 
     </style>
+
 </head>
 
 
@@ -646,23 +518,32 @@
         <ul class="menu">
 
             <li>
-                <a href="index.html">Home</a>
+                <a href="index.html">
+                    Home
+                </a>
             </li>
 
             <li>
-                <a href="https://nooraliafatima.github.io/travelwithnoor/blog/">Blogs</a>
-            </li>
-            <li>
-                <a href="https://nooraliafatima.github.io/travelwithnoor/about.html">About</a>
+                <a
+                    href="https://nooraliafatima.github.io/travelwithnoor/blog/"
+                    class="blog-link">
+                    Blogs
+                </a>
             </li>
 
             <li>
-                <a href="https://www.aroohatours.com/des" class="nav-button">
-                    Explore
+                <a
+                    href="https://nooraliafatima.github.io/travelwithnoor/about.html">
+                    About
                 </a>
             </li>
 
         </ul>
+
+    </div>
+
+</header>
+
 
 
 <!-- =========================
@@ -685,340 +566,93 @@
 
             <p>
                 Destination guides, inspiring travel stories and practical
-                ideas to help you explore the world with more confidence.
+                travel ideas to help you explore the world with more confidence.
             </p>
 
-            <div class="hero-actions">
+            <a
+                href="https://nooraliafatima.github.io/travelwithnoor/blog/"
+                class="hero-button">
+                Explore Travel Stories
+            </a>
 
-                <a href="https://nooraliafatima.github.io/travelwithnoor/blog/" class="button button-primary">
-                    Explore Travel Stories
-                </a>
+        </div>
 
-                <a href="https://www.aroohatours.com/des" class="button button-light">
-                    Browse Destinations
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FEATURED BLOG
+========================= -->
+
+<section class="featured-section">
+
+    <div class="container">
+
+        <div class="section-intro">
+
+            <div class="section-label">
+                From the Journal
+            </div>
+
+            <h2 class="section-title">
+                Latest Travel Guide
+            </h2>
+
+            <p class="section-description">
+                Discover useful destination information, travel ideas
+                and inspiration for your next journey.
+            </p>
+
+        </div>
+
+
+        <article class="blog-card">
+
+
+            <!-- BLOG IMAGE -->
+
+            <div class="blog-image">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Albanian_Alps_from_Air.jpg"
+                    alt="Albanian Alps mountains in Albania"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <!-- BLOG CONTENT -->
+
+            <div class="blog-content">
+
+                <div class="blog-category">
+                    EUROPE
+                </div>
+
+                <h2>
+                    Albanian Alps Travel Guide:
+                    Best Places to Visit
+                </h2>
+
+                <p>
+                    Discover Theth, Valbona, Vermosh, Lëpushë,
+                    Razëm and other spectacular places in Albania's
+                    dramatic northern mountains.
+                </p>
+
+                <a
+                    href="https://nooraliafatima.github.io/travelwithnoor/blog/albanian-alps-travel-guide.html"
+                    class="read-more">
+                    Read the full travel guide →
                 </a>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     INTRO
-========================= -->
-
-<section class="intro">
-
-    <div class="container">
-
-        <div class="section-label">
-            From the Journal
-        </div>
-
-        <h2 class="section-title">
-            Travel inspiration for curious explorers
-        </h2>
-
-        <p class="section-description">
-            Explore destination ideas, cultural experiences, scenic places,
-            practical travel advice and useful information for planning your
-            next journey.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     FEATURED STORIES
-========================= -->
-
-<section class="featured" id="stories">
-
-    <div class="container">
-
-        <div class="story-grid">
-           
-            <article class="story">
-
-                <div class="story-image">
-
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Albanian_Alps_from_Air.jpg"
-                        alt="Albanian Alps"
-                    >
-
-                </div>
-
-                <div class="story-content">
-
-                    <div class="story-category">
-                        EUROPE
-                    </div>
-
-                    <h3>
-                        Albanian Alps Travel Guide: Best Places to Visit
-                    </h3>
-
-                    <p>
-                        Discover Theth, Valbona, Vermosh, Lëpushë, Razëm and other spectacular places in Albania's dramatic northern mountains.
-                    </p>
-
-                    <a href="https://nooraliafatima.github.io/travelwithnoor/blog/albanian-alps-travel-guide.html" class="read-more">
-                        Read the story →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     DESTINATIONS
-========================= -->
-
-<section class="regions-section" id="destinations">
-
-    <div class="container">
-
-        <div class="section-label">
-            Explore the World
-        </div>
-
-        <h2 class="section-title">
-            Explore by region
-        </h2>
-
-        <p class="section-description">
-            Find travel inspiration across some of the world's most
-            fascinating regions.
-        </p>
-
-
-        <div class="region-grid">
-
-
-            <a href="#" class="region">
-
-                <img
-                    src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=900&q=80"
-                    alt="Asia travel destination"
-                >
-
-                <div class="region-overlay">
-                    <h3>Asia</h3>
-                </div>
-
-            </a>
-
-
-
-            <a href="#" class="region">
-
-                <img
-                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
-                    alt="Europe travel destination"
-                >
-
-                <div class="region-overlay">
-                    <h3>Europe</h3>
-                </div>
-
-            </a>
-
-
-
-            <a href="#" class="region">
-
-                <img
-                    src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
-                    alt="South Asia travel destination"
-                >
-
-                <div class="region-overlay">
-                    <h3>South Asia</h3>
-                </div>
-
-            </a>
-
-
-
-            <a href="#" class="region">
-
-                <img
-                    src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=900&q=80"
-                    alt="Africa travel destination"
-                >
-
-                <div class="region-overlay">
-                    <h3>Africa</h3>
-                </div>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     TRAVEL TOPICS
-========================= -->
-
-<section class="topics" id="topics">
-
-    <div class="container">
-
-        <div class="section-label">
-            Travel Planning
-        </div>
-
-        <h2 class="section-title">
-            Find useful travel ideas
-        </h2>
-
-        <p class="section-description">
-            Practical information to help you research destinations and
-            make better-informed travel plans.
-        </p>
-
-
-        <div class="topic-grid">
-
-
-            <article class="topic">
-
-                <div class="topic-number">
-                    01
-                </div>
-
-                <h3>
-                    Best Time to Visit
-                </h3>
-
-                <p>
-                    Understand seasons, weather and the best periods to
-                    experience different destinations.
-                </p>
-
-            </article>
-
-
-
-            <article class="topic">
-
-                <div class="topic-number">
-                    02
-                </div>
-
-                <h3>
-                    Things to Do
-                </h3>
-
-                <p>
-                    Discover attractions, experiences, cultural activities
-                    and memorable things to add to your itinerary.
-                </p>
-
-            </article>
-
-
-
-            <article class="topic">
-
-                <div class="topic-number">
-                    03
-                </div>
-
-                <h3>
-                    Travel Tips
-                </h3>
-
-                <p>
-                    Get practical ideas covering transportation, planning,
-                    local customs and everyday travel questions.
-                </p>
-
-            </article>
-
-
-
-            <article class="topic">
-
-                <div class="topic-number">
-                    04
-                </div>
-
-                <h3>
-                    Destination Guides
-                </h3>
-
-                <p>
-                    Explore detailed destination information before deciding
-                    where your next journey should take you.
-                </p>
-
-            </article>
-
-
-
-            <article class="topic">
-
-                <div class="topic-number">
-                    05
-                </div>
-
-                <h3>
-                    Food & Culture
-                </h3>
-
-                <p>
-                    Discover local food traditions, cultural experiences and
-                    the stories behind destinations.
-                </p>
-
-            </article>
-
-
-
-            <article class="topic">
-
-                <div class="topic-number">
-                    06
-                </div>
-
-                <h3>
-                    Nature & Adventure
-                </h3>
-
-                <p>
-                    Find scenic landscapes, outdoor experiences and
-                    destinations for adventure lovers.
-                </p>
-
-            </article>
-
-
-        </div>
+        </article>
 
     </div>
 
@@ -1030,20 +664,9 @@
      ABOUT
 ========================= -->
 
-<section class="about-section" id="about">
+<section class="about-section">
 
-    <div class="container about-grid">
-
-
-        <div class="about-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=1200&q=85"
-                alt="Travel journal, map and camera"
-            >
-
-        </div>
-
+    <div class="container">
 
         <div class="about-content">
 
@@ -1052,59 +675,19 @@
             </div>
 
             <h2>
-                A place to discover your next journey.
+                Travel ideas made easier to explore.
             </h2>
 
             <p>
-                Travel With Noor is an independent travel publication
-                sharing destination ideas, travel guides and practical
-                information for curious travellers.
+                Travel With Noor shares destination guides,
+                travel stories and practical information for
+                travellers researching their next journey.
             </p>
 
-            <p>
-                From discovering lesser-known places to understanding the
-                best time to visit a destination, the goal is to make
-                travel research easier, clearer and more useful.
-            </p>
-
-          <a href="https://www.aroohatours.com/" class="button button-primary">
-    Discover More
-</a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     NEWSLETTER
-========================= -->
-
-<section class="newsletter" id="newsletter">
-
-    <div class="container">
-
-        <div class="newsletter-box">
-
-            <div class="section-label">
-                Keep Exploring
-            </div>
-
-            <h2>
-                Your next destination starts with an idea.
-            </h2>
-
-            <p>
-                Browse travel stories, destination guides and practical
-                information whenever you're planning your next trip.
-            </p>
-
-            <a href="https://nooraliafatima.github.io/travelwithnoor/blog/" class="button button-primary">
-                Explore Travel Stories
+            <a
+                href="https://nooraliafatima.github.io/travelwithnoor/about.html"
+                class="about-button">
+                Learn More About Travel With Noor
             </a>
 
         </div>
@@ -1123,8 +706,7 @@
 
     <div class="container">
 
-        <div class="footer-grid">
-
+        <div class="footer-content">
 
             <div class="footer-brand">
 
@@ -1133,115 +715,35 @@
                 </h3>
 
                 <p>
-                    Destination guides, travel stories, practical tips and
-                    inspiration for exploring the world.
+                    Destination guides, travel stories,
+                    practical tips and inspiration for
+                    exploring the world.
                 </p>
 
             </div>
 
 
+            <div class="footer-links">
 
-            <div>
+                <a href="index.html">
+                    Home
+                </a>
 
-                <h4>
-                    Explore
-                </h4>
+                <a href="https://nooraliafatima.github.io/travelwithnoor/blog/">
+                    Blogs
+                </a>
 
-                <ul>
-
-                    <li>
-                        <a href="https://travelbynoorblog.wordpress.com/">
-                            Destinations
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://wanderjournal.substack.com/">
-                            Travel Stories
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://destinationguide.neocities.org/">
-                            Travel Tips
-                        </a>
-                    </li>
-
-                </ul>
+                <a href="https://nooraliafatima.github.io/travelwithnoor/about.html">
+                    About
+                </a>
 
             </div>
-
-
-
-            <div>
-
-                <h4>
-                    Regions
-                </h4>
-
-                <ul>
-
-                    <li>
-                        <a href="#">
-                            Asia
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Europe
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Middle East
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Africa
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <div>
-
-                <h4>
-                    Information
-                </h4>
-
-                <ul>
-
-                    <li>
-                        <a href="https://nooraliafatima.github.io/travelwithnoor/about.html">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.pinterest.com/nooraliafatima/">
-                            follow on Pinterest
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
 
         </div>
 
 
         <div class="copyright">
-
             © 2026 Travel With Noor. All rights reserved.
-
         </div>
 
     </div>
@@ -1250,4 +752,5 @@
 
 
 </body>
+
 </html>
