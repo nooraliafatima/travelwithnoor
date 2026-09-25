@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Travel With Noor | Independent Travel Guides</title>
+
+    <meta name="description" content="Learn about Travel With Noor, an independent travel publication sharing destination guides, practical travel information, things to do and travel inspiration.">
+
+    <link rel="canonical" href="https://nooraliafatima.github.io/travelwithnoor/about.html">
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #24312f;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            height: 78px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 11%;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111111;
+        }
+
+        .logo span {
+            color: #078f83;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #222222;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #078f83;
+        }
+
+        .hero {
+            background: #071b18;
+            color: #ffffff;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero small {
+            display: block;
+            color: #65d7cc;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            max-width: 850px;
+            margin: 0 auto 22px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #dce8e6;
+            font-size: 17px;
+        }
+
+        .about-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 90px 30px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .eyebrow {
+            color: #078f83;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .about-content h2 {
+            font-size: 40px;
+            line-height: 1.2;
+            color: #172522;
+            margin-bottom: 22px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #53615f;
+            margin-bottom: 18px;
+        }
+
+        .section {
+            background: #f4f7f6;
+            padding: 80px 30px;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            color: #172522;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            margin: 0 auto 45px;
+            color: #66716f;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            text-align: left;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e7e5;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #172522;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: #66716f;
+        }
+
+        .cta {
+            background: #071b18;
+            color: #ffffff;
+            text-align: center;
+            padding: 75px 25px;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #d7e4e1;
+        }
+
+        .button {
+            display: inline-block;
+            background: #078f83;
+            color: #ffffff;
+            padding: 13px 25px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .button:hover {
+            background: #06796f;
+        }
+
+        footer {
+            background: #07110f;
+            color: #cbd6d3;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+
+            header {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 65px 20px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image {
+                height: 350px;
+            }
+
+            .about-content h2 {
+                font-size: 32px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">
+        Travel <span>With Noor</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog/">Travel Blog</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <small>ABOUT TRAVEL WITH NOOR</small>
+
+    <h1>Travel information made easier.</h1>
+
+    <p>
+        Destination guides, practical travel information and inspiration
+        for curious travellers exploring the world.
+    </p>
+
+</section>
+
+
+<section class="about-section">
+
+    <div class="about-grid">
+
+        <div>
+            <img
+                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80"
+                alt="Travel planning map, camera and travel essentials"
+                class="about-image"
+            >
+        </div>
+
+        <div class="about-content">
+
+            <div class="eyebrow">WELCOME TO TRAVEL WITH NOOR</div>
+
+            <h2>A place to discover your next journey.</h2>
+
+            <p>
+                Travel With Noor is an independent travel publication
+                created to make travel research clearer, easier and more useful.
+            </p>
+
+            <p>
+                The website covers destination guides, places to visit,
+                things to do, the best time to travel, cultural experiences
+                and practical information for travellers planning their next trip.
+            </p>
+
+            <p>
+                From well-known destinations to lesser-known places,
+                the goal is to help readers discover new ideas and make
+                better-informed travel plans.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-inner">
+
+        <div class="eyebrow">WHAT YOU'LL FIND HERE</div>
+
+        <h2>Travel ideas worth exploring</h2>
+
+        <p class="section-intro">
+            Travel With Noor focuses on useful information rather than
+            simply listing destinations. Each guide is designed to help
+            you understand a place before you visit.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Destination Guides</h3>
+                <p>
+                    Discover cities, regions and countries with practical
+                    information about places worth visiting.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Things to Do</h3>
+                <p>
+                    Find experiences, attractions and activities that can
+                    help you make the most of your time in a destination.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Travel Planning</h3>
+                <p>
+                    Explore information about seasons, weather, local
+                    experiences and other useful planning considerations.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about-section">
+
+    <div class="about-content" style="max-width: 800px; margin: auto; text-align: center;">
+
+        <div class="eyebrow">OUR APPROACH</div>
+
+        <h2>Useful information over unnecessary noise.</h2>
+
+        <p>
+            Travel research can quickly become overwhelming. Travel With Noor
+            aims to bring useful information together in a straightforward,
+            easy-to-read format.
+        </p>
+
+        <p>
+            The focus is on practical destination information, helpful ideas
+            and travel inspiration that readers can use when researching
+            where to go and what to experience.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <h2>Ready to explore?</h2>
+
+    <p>
+        Browse the latest Travel With Noor guides and discover ideas
+        for your next journey.
+    </p>
+
+    <a href="blog/" class="button">Explore Travel Blog</a>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Travel With Noor. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
